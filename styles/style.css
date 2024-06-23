@@ -13,13 +13,15 @@
 .address-end {
   justify-self: end;
   align-self: end;
+  padding-bottom: 8px;
 }
 
 .address {
   width: 240.52px;
   font-size: 18px;
-  padding-bottom: 8px;
   font-style: normal;
+  font-weight: 400;
+  line-height: 24.3px;
 }
 
 .header__logo-image {
@@ -55,73 +57,79 @@
 }
 
 .cover {
-  padding: 165px 50px 237px 50px;
   background-image: url("../images/cover.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   min-height: 757px;
   position: relative;
+  padding: 165px 50px 51px 50px;
+  display: grid;
+  grid-template-rows: auto auto;
 }
 
 .cover__title {
-  position: absolute;
-  inset: 0;
+  position: relative;
   z-index: 2;
   font-weight: bold;
   font-size: 100px;
-  line-height: 120px;
   color: #ffffff;
-  inset: 165px 50px 237px 50px;
   text-transform: uppercase;
   letter-spacing: 30px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .accent-span {
   display: block;
 }
 
+.text-left {
+  text-align: left;
+  line-height: 115px;
+}
+
 .text-center {
-  margin-left: 286px;
-  margin-right: 345px;
-  width: 369px;
+  text-align: center;
+  line-height: 100px;
 }
 
 .text-right {
-  margin-left: 583px;
-  text-align: left;
+  text-align: right;
+  line-height: 100px;
 }
 
-.cover-line-height {
-  line-height: 125px;
-}
-
-.text-long-space-80 {
+.text-space-long {
   letter-spacing: 80px;
 }
 
-.text-long-space-60 {
+.text-space-medium {
   letter-spacing: 60px;
   margin: 0;
 }
 
-.text-long-space-30 {
+.text-space-short {
   letter-spacing: 30px;
+}
+
+.no-letter-spacing {
+  letter-spacing: 0px;
 }
 
 .cover__description {
   display: flex;
   justify-content: space-between;
-  position: absolute;
-  top: 655px;
-  left: 78px;
-  right: 50px;
+  padding-left: 28px;
+  align-items: end;
+  position: relative;
   z-index: 2;
   color: #ffffff;
+  min-height: 100%;
 }
 
 .cover__description-text {
-  display: block;
   word-spacing: 24px;
   text-transform: uppercase;
   font-size: 22px;
@@ -137,6 +145,12 @@
   font-weight: 400;
   text-transform: uppercase;
   padding: 12px 32px 11px 31px;
+  border-color: #ffffff;
+  border-width: 1px;
+  font-family: "Raleway", serif;
+  font-weight: 500;
+  font-size: 22px;
+  cursor: pointer;
 }
 
 .overlay {
@@ -166,10 +180,11 @@
   list-style: none;
   display: flex;
   gap: 25px;
-  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .lots__card-list-item {
+  flex-basis: 334px;
   min-height: 563px;
   flex-grow: 1;
 }
@@ -187,6 +202,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+
+  padding: 51px 40px 48px 40px;
+  display: grid;
+  grid-template-rows: auto auto;
+  justify-items: stretch;
 }
 
 .card_type_film {
@@ -202,10 +222,7 @@
 }
 
 .card__title {
-  position: absolute;
-  top: 51px;
-  left: 40px;
-  right: 40px;
+  position: relative;
   z-index: 2;
   color: #ffffff;
   font-weight: 700;
@@ -216,14 +233,13 @@
 }
 
 .card__text {
-  position: absolute;
-  bottom: 48px;
-  left: 40px;
-  right: 40px;
+  position: relative;
   z-index: 2;
   color: #ffffff;
   font-weight: 400;
   font-size: 20px;
+
+  align-self: flex-end;
 }
 
 .lots__look-more-link {
@@ -238,17 +254,25 @@
   padding: 0px 24px 180px 24px;
   display: grid;
   grid-template-columns: 334px auto;
+  align-items: start;
   min-height: 100%;
 }
 
-.about__column {
+.about__column-logo {
   position: relative;
+  padding-top: 35px;
+  padding-left: 47px;
+  min-height: 563px;
+}
+
+.about__column-info {
+  position: relative;
+  padding-top: 133px;
+  padding-left: 25px;
 }
 
 .about__logo {
-  position: absolute;
-  top: 35px;
-  left: 47px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -265,24 +289,25 @@
 }
 
 .about__title {
-  position: absolute;
-  left: 0px;
-  top: 136px;
+  position: relative;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .about__text {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
-  width: 693px;
-  left: 0px;
-  top: 283px;
+  padding-top: 100px;
+
   font-size: 20px;
   font-weight: 400;
+}
+
+.about__text-first {
+  padding-right: 2px;
 }
 
 .footer {
